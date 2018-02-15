@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.selvina.controller.AdminFormController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Data Master">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mnBarangAction" text="Barang" />
+                  <MenuItem mnemonicParsing="false" onAction="#mnPenggunaAction" text="Pengguna" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Laporan">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mnLaporanAction" text="Laporan Penjualan" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Bantuan">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mnTentangAction" text="Tentang" />
+              <MenuItem mnemonicParsing="false" onAction="#mnKeluarAction" text="Keluar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#btnBarangAction" prefHeight="25.0" prefWidth="100.0" text="Barang" />
+                  <Button mnemonicParsing="false" onAction="#btnPenggunaAction" prefHeight="25.0" prefWidth="100.0" text="Pengguna" />
+              </items>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ToolBar>
+         </center>
+         <bottom>
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#btnKeluarAction" prefHeight="25.0" prefWidth="80.0" text="Keluar" />
+              </items>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
