@@ -13,6 +13,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Data Master">
                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mnKategoriAction" text="Kategori" />
                   <MenuItem mnemonicParsing="false" onAction="#mnBarangAction" text="Barang" />
                   <MenuItem mnemonicParsing="false" onAction="#mnPenggunaAction" text="Pengguna" />
                </items>

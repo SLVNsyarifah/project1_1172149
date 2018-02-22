@@ -81,8 +81,8 @@ public class FormBarangController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        cmbKategori.setItems(adminController.getKategoris());
-        tableBarang.setItems(adminController.getBarangs());
+//        cmbKategori.setItems(adminController.getKategoris());
+//        tableBarang.setItems(adminController.getBarangs());
         colId.setCellValueFactory(new PropertyValueFactory<>("idBarang"));
         colNamaBarang.setCellValueFactory(new PropertyValueFactory<>(
                 "namaBarang"));

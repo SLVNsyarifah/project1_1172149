@@ -33,7 +33,8 @@ public class KategoriDaoImpl implements DaoService<Kategori> {
         } catch (HibernateException e) {
             transaction.rollback();
             result = 0;
-            ViewUtil.showAlert(Alert.AlertType.ERROR, "ERROR", e.getMessage());
+            ViewUtil.
+                    showAlert(Alert.AlertType.ERROR, "ERROR", e.getMessage());
         }
         return result;
     }

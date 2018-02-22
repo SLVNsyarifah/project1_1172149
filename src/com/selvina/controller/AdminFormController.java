@@ -54,8 +54,9 @@ public class AdminFormController implements Initializable {
     private ObservableList<User> penggunas;
     private ObservableList<Penjualan> penjualans;
     private ObservableList<DetailPenjualan> detailPenjualans;
-
     private ObservableList<Kategori> kategoris;
+
+    private Stage stageKategori;
 
     public ObservableList<Kategori> getKategoris() {
         if (kategoris == null) {
@@ -242,6 +243,34 @@ public class AdminFormController implements Initializable {
     @FXML
     private void mnKeluarAction(ActionEvent event) {
         Platform.exit();
+    }
+
+    @FXML
+    private void mnKategoriAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.
+                    setLocation(MainApp.class.
+                            getResource("view/FormKategori.fxml"));
+            AnchorPane root = loader.load();
+            FormKategoriController controller = loader.getController();
+            controller.setMainController(this);
+            Scene scene = new Scene(root);
+            stageKategori = new Stage();
+            stageKategori.setScene(scene);
+            stageKategori.setTitle("Form Kategori");
+//            stageKategori.show();
+//            borderPane.getScene().getWindow().hide();
+
+        } catch (IOException ex) {
+            Logger.getLogger(AdminFormController.class.getName()).
+                    log(Level.SEVERE, null, ex);
+        }
+        if (stageKategori.isShowing() && !stageKategori.isFocused()) {
+            stageKategori.toFront();
+        } else {
+            stageKategori.show();
+        }
     }
 
 }
